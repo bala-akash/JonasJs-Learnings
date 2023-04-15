@@ -189,7 +189,7 @@ function findWinner(dolphinAverage, kolaAverage) {
     console.log("both have the same score");
   }
 }
-
+//function calling other functions
 if (WINNER === "firstMatchWinner") {
   findWinner(dolphinAverage1, kolaAverage1);
 } else if (WINNER === "secondMatchWinner") {
