@@ -21,17 +21,17 @@ calculateTip(430);
 
 // it can also be written as
 
-function calculateTip(bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
-const bills = [430, 275, 40];
-const tips = [
-  calculateTip(bills[0]),
-  calculateTip(bills[1]),
-  calculateTip(bills[2]),
-];
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(bills, tips, total);
+// function calculateTip(bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// const bills = [430, 275, 40];
+// const tips = [
+//   calculateTip(bills[0]),
+//   calculateTip(bills[1]),
+//   calculateTip(bills[2]),
+// ];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(bills, tips, total);
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 let dolphinScore = calcAverage(44, 23, 71); // no one wins
@@ -141,3 +141,48 @@ for (let exercise = 1; exercise <= 3; exercise++) {
     console.log(`---Exercise : ${exercise} and repetition ${repetition}`);
   }
 }
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`repetation ${rep} `);
+  rep++;
+}
+
+// an example with a dice
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(` The drawn dice is : ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice == 6) {
+    console.log(`You drawn ${dice} `);
+  }
+}
+
+function calculateTip(bills) {
+  return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
+}
+
+const bills = [24, 41, 586, 784, 25, 48, 58, 784, 123, 451, 98];
+const tips = [];
+const total = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calculateTip(bills[i]);
+  tips.push(tip);
+  total.push(tip + bills[i]);
+}
+console.log(bills, tips, total);
+
+let arr = [2, 4];
+function calculateAverage(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    sum += arr[i];
+  }
+  let average = sum / arr.length;
+  return average;
+}
+console.log(calculateAverage(arr));
