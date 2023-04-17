@@ -186,3 +186,33 @@ function calculateAverage(arr) {
   return average;
 }
 console.log(calculateAverage(arr));
+
+const temperature1 = [55, 4, "error", 2, 23];
+const temp2 = [4, 57, 8, "error", -1];
+const temp3 = temperature1.concat(temp2);
+console.log(temp3);
+const calcTempAltitude = function (temp) {
+  let max = temp[0];
+  let min = temp[0];
+  for (let i = 0; i < temp.length; i++) {
+    if (typeof temp[i] !== "number") continue;
+    if (temp[i] > max) max = temp[i];
+    if (temp[i] < min) min = temp[i];
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitude = calcTempAltitude(temp3);
+console.log(amplitude);
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celcius",
+    value: +prompt("Enter the degree:"),
+  };
+  const kelvin = measurement.value + 10;
+  return kelvin;
+};
+
+console.log(measureKelvin());

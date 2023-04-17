@@ -48,3 +48,19 @@ function spinWords(string) {
   return result.join(" ");
 }
 console.log(spinWords("Hey fellow warriors"));
+
+let alphabet1 = "t";
+let alphabet2 = "T";
+if (alphabet1 == alphabet2) {
+  console.log("both are same");
+} else {
+  console.log("both are not same");
+}
+
+const array = ["a", "b", "c", "d", "e"];
+let value = [];
+let numbering = 1;
+for (let i = 0; i < array.length; i++) {
+  let result = value.push(numbering++);
+  console.log(result);
+}
