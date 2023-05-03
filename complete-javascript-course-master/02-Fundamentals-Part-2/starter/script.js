@@ -203,16 +203,26 @@ const calcTempAltitude = function (temp) {
   return max - min;
 };
 
-const amplitude = calcTempAltitude(temp3);
-console.log(amplitude);
-const measureKelvin = function () {
-  const measurement = {
-    type: "temp",
-    unit: "celcius",
-    value: +prompt("Enter the degree:"),
-  };
-  const kelvin = measurement.value + 10;
-  return kelvin;
-};
+// const amplitude = calcTempAltitude(temp3);
+// console.log(amplitude);
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temp",
+//     unit: "celcius",
+//     value: +prompt("Enter the degree:"),
+//   };
+//   const kelvin = measurement.value + 10;
+//   return kelvin;
+// };
 
-console.log(measureKelvin());
+// console.log(measureKelvin());
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+function printForecast(data) {
+  for (let i = 0; i < data.length; i++) {
+    console.log(`...${data[0]}...${data[1]}...${data[2]}...`);
+  }
+}
+printForecast(data1);

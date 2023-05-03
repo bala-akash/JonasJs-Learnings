@@ -64,3 +64,50 @@ for (let i = 0; i < array.length; i++) {
   let result = value.push(numbering++);
   console.log(result);
 }
+
+let obj = {
+  name: "akash",
+  age: "23",
+};
+obj.adress = "14 / 138 pillayar kovil street ";
+console.log(obj);
+
+// assigning key pair value
+
+// const alphabets = [];
+
+// for (let i = 97; i <= 122; i++) {
+//   alphabets.push(String.fromCharCode(i));
+// }
+// const emptyObj = {};
+// const values = [];
+// let nnumbering = 1;
+// for (let i = 0; i < alphabets.length; i++) {
+//   let str = "akash";
+//   // console.log(alphabets[i]);
+//   let result = values.push(nnumbering++);
+//   emptyObj[alphabets[i]] = values[i];
+//   for (let j = 0; j < str.length; j++) {
+//     console.log("it has the j value");
+//   }
+// }
+
+// console.log(emptyObj);
+// console.log(alphabets); // ['a', 'b', 'c', ..., 'x', 'y', 'z']
+
+const alphabets = [];
+
+for (let i = 97; i <= 122; i++) {
+  alphabets.push(String.fromCharCode(i));
+}
+const emptyObj = {};
+const values = [];
+// let nnumbering = 1;
+for (let i = 0; i < alphabets.length; i++) {
+  // let result = values.push(nnumbering++);
+  emptyObj[alphabets[i]] = i;
+  console.log(emptyObj);
+  // for (let j = 1; j < 5; j++) {
+  //   console.log(`repetation -----${j}`);
+  // }
+}
